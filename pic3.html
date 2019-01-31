@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>pic3</title>
+    <!-- 引入 lib/echarts.custom.min.js -->
+    <script src="echarts.common.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="pic3.css" /> 
+</head>
+<body>
+    <header>
+        <div class="one">
+            <div class="one_1">
+            <a class="a1" href="#"><img class="img1" src="img/pic1.jpg"></a>
+            <nav>
+                    <a class="a2" href="#"><img class="img2" src="img/pic1.jpg"></a>
+                    <a class="a3" href="#"><img class="img2" src="img/pic1.jpg"></a>
+                    <a class="a4" href="#"><p>Log Out</p></a>
+            </nav>
+            </div>
+        </div>
+    </header>
+    <div class="two_0">
+        <div class="two">
+            <div class="two_1">
+                <div class="nav_1">
+                    <h1 class="h_1">AudienceOverview </h1>
+                    <h1 class="h_2">Roseville,CA</h1>
+                </div>
+                <div class="nav_2">
+                    <ul>
+                       <li>DASHBOARD</li>
+                       <li>PROJECTS</li>
+                       <li>CALENDAR</li>
+                       <li>MAILBOX</li>
+                       <li>SETTINGS</li>
+                    </ul>
+                </div>
+             </div> 
+             <div class="two_2">
+                 <div id="p1" style="float:left;width: 250px;height:250px;margin-top: 50px;"></div>
+                 <script type="text/javascript">
+                 var myChart = echarts.init(document.getElementById('p1'));
+    option = {
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    title: {
+                text: 'Pageviews by users'
+            },
+    series: [
+        {
+            name:'浏览量',
+            type:'pie',
+            radius: ['50%', '70%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:[
+                {value:335, name:'APP'},
+                {value:310, name:'PC'},
+
+            ]
+        }
+    ]
+};
+myChart.setOption(option);
+                 </script>
+                 <div id="p2" style="float:left;width: 250px;height:250px;margin-top: 50px;"></div>
+                 <script type="text/javascript">
+                 var myChart = echarts.init(document.getElementById('p2'));
+    option = {
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    series: [
+        {
+            name:'浏览量',
+            type:'pie',
+            radius: ['50%', '70%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:[
+                {value:100, name:'APP'},
+                {value:310, name:'PC'},
+
+            ]
+        }
+    ]
+};
+myChart.setOption(option);
+                 </script>
+                 <div id="p3" style="float:left;width: 250px;height:250px;margin-top: 50px;"></div>
+                 <script type="text/javascript">
+                    var myChart = echarts.init(document.getElementById('p3'));
+       option = {
+       tooltip: {
+           trigger: 'item',
+           formatter: "{a} <br/>{b}: {c} ({d}%)"
+       },
+       series: [
+           {
+               name:'浏览量',
+               type:'pie',
+               radius: ['50%', '70%'],
+               avoidLabelOverlap: false,
+               label: {
+                   normal: {
+                       show: false,
+                       position: 'center'
+                   },
+                   emphasis: {
+                       show: true,
+                       textStyle: {
+                           fontSize: '30',
+                           fontWeight: 'bold'
+                       }
+                   }
+               },
+               labelLine: {
+                   normal: {
+                       show: false
+                   }
+               },
+               data:[
+                   {value:600, name:'APP'},
+                   {value:310, name:'PC'},
+   
+               ]
+           }
+       ]
+   };
+   myChart.setOption(option);
+                 </script>
+                 <div id="p4" style="float:left;width: 300px;height:300px;margin-top: 50px;margin-left: 50px;"></div>
+                 <script type="text/javascript">
+                    var myChart = echarts.init(document.getElementById('p4'));
+                    option = {
+                        color: ['#3398DB'],
+    xAxis: {
+        type: 'category',
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [120, 200, 150, 80, 70, 110, 130],
+        type: 'bar'
+    }]
+};
+
+   myChart.setOption(option);
+                 </script>
+                 <div><p style="float:left;margin-left: 20px;">Total / Out of 6,356 views</p><p style="float:right;margin-right: 250px;">Applicants a Day</p></div>
+             </div> 
+             <div class="two_3">
+                 <div id="p5" style="background-color: aliceblue;float:left;width: 560px;height:450px;margin-top: 20px;margin-right: 20px;"></div>
+                 <script type="text/javascript">
+                 var myChart = echarts.init(document.getElementById('p5'));
+                 option = {
+    title : {
+        text: 'Pageviews by users (past 5 days)',
+        x:'10%',
+        y:'10%'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        x:'0%',
+        y:'40%',
+        data: ['APP','PC','PAD']
+    },
+    series : [
+        {
+            name: '访问量',
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:[
+                {value:335, name:'APP'},
+                {value:310, name:'PC'},
+                {value:234, name:'PAD'},
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+                 myChart.setOption(option);
+                 </script>
+                 <div id="p6" style="background-color: aliceblue;float:left;width: 560px;height:450px;margin-top: 20px;"></div>
+                 <script type="text/javascript">
+                 var myChart = echarts.init(document.getElementById('p6'));
+                 option = {
+    title: {
+        text: 'Market Value'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    legend: {
+        data: ['Day', 'Night'],
+        x:'70%',
+        y:'90%'
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        show:false,
+
+    },
+    yAxis: {
+        type: 'category',
+        splitLine:{
+            show:false
+            
+        },
+        data: ['Jul','June','May','Apri','March']
+    },
+    series: [
+        {
+            name: 'Day',
+            type: 'bar',
+            data: [ 23489, 29034, 104970, 131744, 630230]
+        },
+        {
+            name: 'Night',
+            type: 'bar',
+            data: [ 23438, 31000, 121594, 134141, 681807]
+        }
+    ]
+};
+
+                 myChart.setOption(option);
+                 </script>         
+             </div> 
+             <div class="two_4">
+                    <div id="p7" style="background-color: aliceblue;float:left;width: 560px;height:450px;margin-top: 20px;margin-right: 20px;"></div>
+                    <script type="text/javascript">
+                    var myChart = echarts.init(document.getElementById('p7'));
+                    option = {
+       title : {
+           text: 'Analytics',
+       },
+    xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed']
+    },
+    yAxis: {
+        type: 'value',
+        show:false
+    },
+    series: [{
+        data: [20, 32, 10],
+        type: 'line',
+        smooth: true
+    }]
+};
+
+                    myChart.setOption(option);
+                    </script>
+                    <div style="background-color: aliceblue;float:left;width: 560px;height:450px;margin-top: 20px;">
+                        <div style="background-color: aliceblue;width: 560px;height:109px;border-bottom: #e62020 1px solid;">
+                           <h1 style="float:left;margin-left:50px;margin-top:49px;">Support Requests</h1>
+                           <a href="#" style="float:right;width:95px;height:40px;margin-right:50px;margin-top:40px;border:#e62020 2px solid;text-decoration: none;text-align: center;"><p>VIEW ALL</p></a>
+                        </div>
+                        <div class="three" style="background-color: aliceblue;width: 560px;height:340px;">
+                                <table>
+                                        <tr>
+                                          <th>TIME</th>
+                                          <th>USER NAME</th>
+                                          <th>STATUS</th>
+                                        </tr>
+                                        <tr>
+                                          <td>9:45PM</td>
+                                          <td>info@design.com</td>
+                                          <td><p style="width:65px;height:30px;background-color:#e40f0f;">solved</p></td>
+                                        </tr>
+                                        <tr>
+                                          <td>9:45PM</td>
+                                          <td>info@design.com</td>
+                                          <td><p style="width:65px;height:30px;background-color:#f00d0d;">solved</p></td>
+                                        </tr>
+                                        <tr>
+                                          <td>9:45PM</td>
+                                          <td>info@design.com</td>
+                                          <td><p style="width:65px;height:30px;background-color:#ec1212;">solved</p></td>
+                                        </tr>
+                                        <tr>
+                                          <td>9:45PM</td>
+                                          <td>info@design.com</td>
+                                          <td><p style="width:65px;height:30px;background-color:#e41515;">solved</p></td>
+                                        </tr>
+                                        <tr>
+                                          <td>9:45PM</td>
+                                          <td>info@design.com</td>
+                                          <td><p style="width:65px;height:30px;background-color:#ec1414;">solved</p></td>
+                                        </tr>
+                                 </table>
+                        </div>
+                    </div>
+                           
+                </div> 
+        </div>
+    </div>
+    <div class="end">
+        <img src="#">
+        <ul>
+            <li><a href="#">SPORT</a></li>
+            <li><a href="#">SPORT</a></li>
+            <li><a href="#">SPORT</a></li>
+            <li><a href="#">SPORT</a></li>
+        </ul>
+        <ul>
+                <li><a href="#">SPORT</a></li>
+                <li><a href="#">SPORT</a></li>
+                <li><a href="#">SPORT</a></li>
+                <li><a href="#">SPORT</a></li>
+            </ul>
+            <ul>
+                    <li><a href="#">SPORT</a></li>
+                    <li><a href="#">SPORT</a></li>
+                    <li><a href="#">SPORT</a></li>
+                    <li><a href="#">SPORT</a></li>
+            </ul>
+            <ul>
+                    <li><a href="#">SPORT</a></li>
+                    <li><a href="#">SPORT</a></li>
+                    <li><a href="#">SPORT</a></li>
+                    <li><a href="#">SPORT</a></li>
+            </ul>
+            <ul>
+                    <li><a href="#">SPORT</a></li>
+                    <li><a href="#">SPORT</a></li>
+            </ul>
+    </div>
+    <div class="end1"></div>     
+</body>
+</html>
